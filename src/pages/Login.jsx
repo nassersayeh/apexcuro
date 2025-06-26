@@ -30,7 +30,6 @@ function Login() {
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-primary">{t('login.title')}</h2>
-          <LanguageSwitcher />
         </div>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
