@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import NavBar from '../components/landing/NavBar';
 
 function Login() {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ function Login() {
     try {
       const response = await axios.post('https://crm.aipilot.ps/api/users/login', { email, password });
       localStorage.setItem('token', response.data.token);
-      navigate('/');
+      navigate('/dashboard');
     } catch (err) {
       setError(t('login.error'));
     }
@@ -24,6 +25,8 @@ function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-accent">
+            <NavBar />
+
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-primary">{t('login.title')}</h2>

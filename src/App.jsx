@@ -7,20 +7,30 @@ import Users from './pages/Users';
 import Properties from './pages/Properties';
 import Leads from './pages/Leads';
 import Requests from './pages/Requests';
+import LandingPage from './pages/LandingPage';
+import DemoPage from './pages/DemoPage';
+import PricingPage from './pages/PricingPage';
+import FeaturesPage from './pages/FeaturesPage';
+import PrivateRoute from './components/PrivateRoute';
+import SignUpPage from './pages/SignUpPage';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
-          <Route element={<Layout />}>
-            <Route path="/" element={<Dashboard />} />
+          <Route path="/demo" element={<DemoPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route element= {<Layout />}/>
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />
             <Route path="/properties" element={<Properties />} />
             <Route path="/leads" element={<Leads />} />
             <Route path="/requests" element={<Requests />} />
-          </Route>
         </Routes>
       </AuthProvider>
     </BrowserRouter>

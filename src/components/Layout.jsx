@@ -1,59 +1,54 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
-import { UserIcon, HomeIcon, BuildingOfficeIcon, UserGroupIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
+import { useContext } from 'react';
+import AuthContext from '../context/AuthContext';
 
-function Layout() {
+const Layout = ({ children }) => {
   const { t } = useTranslation();
+  const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const navItems = [
-    { path: '/', icon: HomeIcon, label: t('dashboard.title') },
-    { path: '/users', icon: UserIcon, label: t('users.title') },
-    { path: '/properties', icon: BuildingOfficeIcon, label: t('properties.title') },
-    { path: '/leads', icon: UserGroupIcon, label: t('leads.title') },
-    { path: '/requests', icon: DocumentTextIcon, label: t('requests.title') },
-  ];
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   return (
-    <div className="flex h-screen bg-accent">
-      {/* Sidebar */}
-      <div className="w-64 bg-primary text-white flex flex-col">
-        <div className="p-4 text-2xl font-bold">ApexCuro</div>
-        <nav className="flex-1">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={({ isActive }) =>
-                `flex items-center p-4 space-x-2 ${isActive ? 'bg-secondary' : 'hover:bg-blue-700'}`
-              }
-            >
-              <item.icon className="w-6 h-6" />
-              <span>{item.label}</span>
-            </NavLink>
-          ))}
-        </nav>
-      </div>
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col">
-        {/* Header */}
-        <header className="bg-white shadow p-4 flex justify-between items-center">
-          <h1 className="text-xl font-semibold">{t('dashboard.title')}</h1>
-          <div className="flex items-center space-x-4">
-            <LanguageSwitcher />
-            <div className="flex items-center space-x-2">
-              <UserIcon className="w-6 h-6 text-primary" />
-              <span>Admin</span>
-            </div>
-          </div>
-        </header>
-        {/* Content */}
-        <main className="flex-1 p-6 overflow-auto">
-          <Outlet />
-        </main>
-      </div>
+    <div className="flex min-h-screen">
+      <nav className="w-64 bg-gray-800 text-white p-4 flex flex-col">
+        <div className="mb-6">
+          <h2 className="text-xl font-bold">{t('dashboard.title')}</h2>
+          <p className="text-sm">{t('dashboard.welcome', { name: user?.username || '' })}</p>
+        </div>
+        <NavLink to="/dashboard" className="block py-2 hover:bg-gray-700 rounded">
+          {t('dashboard.title')}
+        </NavLink>
+        {user?.role === 'Super Admin' && (
+          <NavLink to="/users" className="block py-2 hover:bg-gray-700 rounded">
+            {t('users.title')}
+          </NavLink>
+        )}
+        <NavLink to="/properties" className="block py-2 hover:bg-gray-700 rounded">
+          {t('properties.title')}
+        </NavLink>
+        <NavLink to="/leads" className="block py-2 hover:bg-gray-700 rounded">
+          {t('leads.title')}
+        </NavLink>
+        {user?.role === 'Super Admin' && (
+          <NavLink to="/requests" className="block py-2 hover:bg-gray-700 rounded">
+            {t('requests.title')}
+          </NavLink>
+        )}
+        <button
+          onClick={handleLogout}
+          className="mt-auto bg-red-500 text-white p-2 rounded hover:bg-red-600 transition"
+        >
+          {t('dashboard.logout')}
+        </button>
+      </nav>
+      <main className="flex-grow p-4">{children}</main>
     </div>
   );
-}
+};
 
 export default Layout;
