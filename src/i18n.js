@@ -28,6 +28,40 @@ i18n
               Invalid_credentials: "Invalid email or password"
             }
           },
+          about: {
+            title: "About Us - ApexCuro",
+            vision: "Our Vision",
+            vision_description: "At ApexCuro, we aim to reshape the real estate industry in Palestine by offering an innovative platform that blends advanced technology with professional services. We are committed to providing seamless solutions that meet the needs of clients, whether individuals seeking the perfect property or organizations looking to expand their real estate business.",
+            story: "Our Story",
+            story_description: "ApexCuro was founded with a vision to support the local real estate market, leveraging our team's expertise in property management and digital marketing. Starting as a small passionate team, we have grown to become a trusted partner for both clients and real estate agents alike. Today, we offer a comprehensive platform enabling users to manage properties, track leads, and handle requests with high efficiency.",
+            services: "Our Services",
+            service1: "Property Management: Explore a comprehensive database of properties available for sale or rent.",
+            service2: "Lead Management: Advanced tools to track potential clients and organize relationships.",
+            service3: "Custom Solutions: Services tailored for individuals, agents, and commercial organizations.",
+            service4: "Technical Support: A 24/7 support team ready to assist you."
+          },
+          privacy: {
+            title: "Privacy Policy - ApexCuro",
+            introduction: "Introduction",
+            introduction_description: "At ApexCuro, we are committed to protecting our users' privacy. This policy explains how we collect, use, and safeguard your personal data when using our platform.",
+            data_collection: "Data Collection",
+            data_collection_description: "We collect data such as name, email, and phone number during registration or property addition. We also use cookies to enhance your experience.",
+            data_usage: "Data Usage",
+            data_usage_description: "We use your data to provide our services, improve the platform, and contact you regarding your requests. We do not share your data with third parties without your consent unless required by law.",
+            data_protection: "Data Protection",
+            data_protection_description: "We employ modern encryption and advanced security to protect your data. However, we cannot guarantee absolute security, so we advise you to safeguard your login credentials."
+          },
+          terms: {
+            title: "Terms of Service - ApexCuro",
+            acceptance: "Acceptance of Terms",
+            acceptance_description: "By using the ApexCuro platform, you agree to these terms. If you do not agree, please do not use the service.",
+            usage: "Permitted Use",
+            usage_description: "You may use the platform for personal or legal commercial purposes. Using it for illegal activities or promoting harmful content is prohibited.",
+            responsibility: "Responsibility",
+            responsibility_description: "ApexCuro is not liable for any loss resulting from platform use. The user is responsible for the accuracy of the data they provide.",
+            modification: "Modification of Terms",
+            modification_description: "We reserve the right to modify these terms at any time. You will be notified of changes via the platform or email."
+          },
           signup: {
             title: "Sign Up for ApexCuro",
             subtitle: "Create your account to start managing your real estate business.",
@@ -456,6 +490,40 @@ i18n
             yearly: "سنوي",
             price: "السعر",
             city: "المدينة"
+          },
+          about: {
+            title: "من نحن - ApexCuro",
+            vision: "رؤيتنا",
+            vision_description: "في ApexCuro، نهدف إلى إعادة تشكيل صناعة العقارات في فلسطين من خلال تقديم منصة مبتكرة تجمع بين التكنولوجيا المتقدمة والخدمات الاحترافية. نحن ملتزمون بتوفير حلول سلسة تلبي احتياجات العملاء، سواء كانوا أفرادًا يبحثون عن عقار مثالي أو مؤسسات تسعى لتوسيع أعمالها العقارية.",
+            story: "قصتنا",
+            story_description: "تأسست ApexCuro كرؤية لدعم سوق العقارات المحلي، مستفيدين من خبرات فريقنا المتخصص في إدارة العقارات والتسويق الرقمي. بدأنا كفريق صغير شغوف، ومنذ ذلك الحين نمينا لنصبح شريكًا موثوقًا للعملاء والوسطاء العقاريين على حد سواء. اليوم، نقدم منصة شاملة تتيح للمستخدمين إدارة العقارات، تتبع الزبائن، ومعالجة الطلبات بكفاءة عالية.",
+            services: "خدماتنا",
+            service1: "إدارة العقارات: استكشف قاعدة بيانات شاملة للعقارات المتاحة للبيع أو الإيجار.",
+            service2: "إدارة الزبائن: أدوات متقدمة لتتبع العملاء المحتملين وتنظيم العلاقات.",
+            service3: "حلول مخصصة: خدمات مصممة خصيصًا للأفراد، الوسطاء، والمؤسسات التجارية.",
+            service4: "دعم فني: فريق دعم متاح لمساعدتك 24/7."
+          },
+          privacy: {
+            title: "سياسة الخصوصية - ApexCuro",
+            introduction: "مقدمة",
+            introduction_description: "في ApexCuro، نحن ملتزمون بحماية خصوصية مستخدمينا. هذه السياسة توضح كيفية جمعنا، استخدامنا، وحماية بياناتك الشخصية عند استخدام منصتنا.",
+            data_collection: "جمع البيانات",
+            data_collection_description: "نقوم بجمع بيانات مثل الاسم، البريد الإلكتروني، ورقم الهاتف عند التسجيل أو إضافة عقارات. كما نستخدم ملفات تعريف الارتباط لتحسين تجربتك.",
+            data_usage: "استخدام البيانات",
+            data_usage_description: "نستخدم بياناتك لتوفير خدماتنا، تحسين المنصة، والاتصال بك بخصوص طلباتك. لا نشارك بياناتك مع طرف ثالث دون موافقتك إلا في الحالات القانونية.",
+            data_protection: "حماية البيانات",
+            data_protection_description: "نستخدم تشفيرًا حديثًا وحماية متقدمة لحماية بياناتك. ومع ذلك، لا يمكننا ضمان الأمان المطلق، لذا ننصحك بحماية بيانات تسجيل الدخول الخاصة بك."
+          },
+          terms: {
+            title: "شروط الخدمة - ApexCuro",
+            acceptance: "القبول بالشروط",
+            acceptance_description: "باستخدام منصة ApexCuro، فإنك توافق على هذه الشروط. إذا لم توافق، يرجى عدم استخدام الخدمة.",
+            usage: "الاستخدام المسموح",
+            usage_description: "يحق لك استخدام المنصة لأغراض شخصية أو تجارية قانونية. يمنع استخدامها لأي أنشطة غير قانونية أو ترويج محتوى ضار.",
+            responsibility: "المسؤولية",
+            responsibility_description: "ApexCuro لا تتحمل مسؤولية عن أي خسارة ناتجة عن استخدام المنصة. المستخدم مسؤول عن دقة البيانات التي يقدمها.",
+            modification: "تعديل الشروط",
+            modification_description: "نحتفظ بحق تعديل هذه الشروط في أي وقت. سيتم إشعاركم بالتغييرات عبر المنصة أو البريد الإلكتروني."
           },
           users: {
             title: "إدارة المستخدمين",

@@ -13,6 +13,9 @@ import PricingPage from './pages/PricingPage';
 import FeaturesPage from './pages/FeaturesPage';
 import PrivateRoute from './components/PrivateRoute';
 import SignUpPage from './pages/SignUpPage';
+import AboutUs from './pages/AboutUs';
+import TermsOfService from './pages/TermsOfService';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route element= {<Layout />}/>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/users" element={<Users />} />

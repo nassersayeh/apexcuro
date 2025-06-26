@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    const publicRoutes = ['/login', '/demo', '/pricing', '/features', '/signup','/'];
+    const publicRoutes = ['/login', '/demo', '/pricing', '/features', '/signup','/','/about-us','/privacy-policy','/terms-of-service'];
     console.log('useEffect triggered:', { pathname: location.pathname, publicRoutes });
     if (publicRoutes.includes(location.pathname)) {
       setLoading(false);

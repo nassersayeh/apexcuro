@@ -8,20 +8,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">{t('landing.footer.company')}</h3>
-            <p className="text-gray-400">{t('landing.footer.about')}</p>
+            <a href='/about-us' className="text-gray-400">{t('landing.footer.about')}</a>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">{t('landing.footer.social')}</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary">Twitter</a>
-              <a href="#" className="text-gray-400 hover:text-primary">LinkedIn</a>
-              <a href="#" className="text-gray-400 hover:text-primary">Facebook</a>
+              <a href="https://www.linkedin.com/company/apexcuro/" className="text-gray-400 hover:text-primary">LinkedIn</a>
+              <a href="https://www.facebook.com/ApexCuro" className="text-gray-400 hover:text-primary">Facebook</a>
             </div>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">{t('landing.footer.contact')}</h3>
-            <a href="#" className="text-gray-400 hover:text-primary block">{t('landing.footer.privacy')}</a>
-            <a href="#" className="text-gray-400 hover:text-primary block">{t('landing.footer.terms')}</a>
+            <a href="/privacy-policy" className="text-gray-400 hover:text-primary block">{t('landing.footer.privacy')}</a>
+            <a href="/terms-of-service" className="text-gray-400 hover:text-primary block">{t('landing.footer.terms')}</a>
           </div>
         </div>
         <p className="text-center text-gray-400 mt-8">
